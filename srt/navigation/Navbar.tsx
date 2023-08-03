@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ButtonHeadNav } from "../components/global/Button";
 
-export default function Navbar() {
+export default function Navbar(setNumb) {
   return (
     <div
       style={{
