@@ -29,8 +29,10 @@ function App() {
         setCek(true);
         localStorage.setItem("isLoggedIn", true);
       }, 2000);
+      
     } else {
     }
+    hadlewidth();
   }, []);
 
   return cek === false ? (
