@@ -10,7 +10,7 @@ function Aboutme({ screenDimensions }) {
         paddingBottom:'5%',
       }}
     >
-      <div style={{width: screenDimensions === false ? "80%" : "40%",}}>
+      <div style={{width: screenDimensions === false ? "80%" : "60%",}}>
         <h1>About me</h1>
         <div style={{textAlign:'justify'}}>
           As a highly motivated and committed Mobile Engineer, Web Engineer
