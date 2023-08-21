@@ -1,4 +1,3 @@
-import "./MyProject.css";
 import toyotaTrustImage from "../components/assets/toyotatrust.png";
 import jackfixer from "../components/assets/jackfixer.png";
 import contact from "../components/assets/contact.jpg";
@@ -6,7 +5,14 @@ import csi from "../components/assets/csi.png";
 
 function Myproject(screenDimensions) {
   return (
-    <div className="Myproject">
+    <div
+      style={{
+        backgroundColorolor: "white",
+        paddingLeft: "5%",
+        paddingRight: "5%",
+        paddingBottom: "5%",
+      }}
+    >
       <h1
         style={{
           alignItems: "center",

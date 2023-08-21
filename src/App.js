@@ -5,19 +5,21 @@ import Splashscreen from "./screen/Splashscreen";
 import Home from "./screen/Home";
 import { Element } from "react-scroll";
 import Myproject from "./screen/MyProject";
+import Aboutme from "./screen/Aboutme";
 
 function App() {
   const [modal, seModal] = useState(false);
   const [screenDimensions, setScreenDimensions] = useState(true);
   const hadlewidth = () => {
-    if (window.innerWidth > window.innerHeight) {
+    if (window.innerWidth > 450) {
       setScreenDimensions(true);
     } else {
       setScreenDimensions(false);
-      seModal(false)
+      seModal(false);
     }
     // console.log('screenDimensions',screenDimensions)
   };
+  console.log("window.innerWidth : ", window.innerWidth);
   window.addEventListener("resize", hadlewidth);
 
   const [cek, setCek] = useState(false);
@@ -42,14 +44,15 @@ function App() {
       />
       <HeadNavModal seModal={seModal} modal={modal} />
       <Element name="home">
-          <Home screenDimensions={screenDimensions} />
-        </Element>
+        <Home screenDimensions={screenDimensions} />
+      </Element>
       <Element name="myproject">
-          <Myproject screenDimensions={screenDimensions} />
-        </Element>
-      <div className="App-body">this is body</div>
-      <div className="App-body">this is body2</div>
-      <div className="App-body">this is body3</div>
+        <Myproject screenDimensions={screenDimensions} />
+      </Element>
+      <Element name="aboutme">
+        <Aboutme screenDimensions={screenDimensions} />
+      </Element>
+      {/* <div className="App-body"></div> */}
     </div>
   );
 }

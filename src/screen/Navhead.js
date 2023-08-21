@@ -1,15 +1,26 @@
 import { Link } from "react-scroll";
-import "./Navhead.css";
 
 function Navhead(props) {
   const { screenDimensions, seModal, modal } = props;
   // console.log("screenDimensions navhead : ",screenDimensions)
   return (
-    <div className="Navhead">
-      <div className="Navhead-header">
+    <div style={{  paddingLeft: '10%',
+      paddingRight: '10%',
+      paddingTop: '1%',
+      paddingBottom: '1%',
+      position: 'sticky',
+      top: 0,
+      backgroundColor: 'white',}}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+        }}
+      >
         <div>Aditya Rosyitama</div>
         {screenDimensions === true ? (
-          <div className="Navhead-list">
+          <div style={{ display: "flex", flexDirection: "row" }}>
             <ButtonHeadNav
               linknav={"home"}
               text={"Home"}
@@ -25,19 +36,19 @@ function Navhead(props) {
               seModal={seModal}
             />
             <ButtonHeadNav
-              linknav={"about"}
+              linknav={"aboutme"}
               text={"About"}
               colortext={"black"}
               marginlefttext={10}
               seModal={seModal}
             />
-            <ButtonHeadNav
+            {/* <ButtonHeadNav
               linknav={"profile"}
               text={"Profile"}
               colortext={"black"}
               marginlefttext={10}
               seModal={seModal}
-            />
+            /> */}
           </div>
         ) : (
           <button
@@ -83,7 +94,23 @@ export const HeadNavModal = ({ modal, seModal }) => {
   return (
     <>
       {modal === true ? (
-        <div className="HeadNavModal">
+        <div
+          style={{
+            width: "80%",
+            position: "fixed",
+            top: 0,
+            marginTop: "15%",
+            marginLeft: "15%",
+            alignContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            paddingTop: "5%",
+            paddingBottom: "5%",
+            borderColor: "grey",
+            borderWidth: 2,
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+          }}
+        >
           <div>
             <ButtonHeadNav
               linknav={"home"}
@@ -102,20 +129,20 @@ export const HeadNavModal = ({ modal, seModal }) => {
             />
             <div style={{ marginTop: 10 }} />
             <ButtonHeadNav
-              linknav={"about"}
-              text={"About"}
+              linknav={"aboutme"}
+              text={"About me"}
               colortext={"white"}
               marginlefttext={0}
               seModal={seModal}
             />
-            <div style={{ marginTop: 10 }} />
+            {/* <div style={{ marginTop: 10 }} />
             <ButtonHeadNav
               linknav={"profile"}
               text={"Profile"}
               colortext={"white"}
               marginlefttext={0}
               seModal={seModal}
-            />
+            /> */}
           </div>
         </div>
       ) : (
