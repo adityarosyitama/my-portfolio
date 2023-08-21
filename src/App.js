@@ -19,7 +19,7 @@ function App() {
     }
     // console.log('screenDimensions',screenDimensions)
   };
-  console.log("window.innerWidth : ", window.innerWidth);
+  // console.log("window.innerWidth : ", window.innerWidth);
   window.addEventListener("resize", hadlewidth);
 
   const [cek, setCek] = useState(false);

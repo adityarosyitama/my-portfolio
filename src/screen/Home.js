@@ -107,7 +107,7 @@ function ButtonLink({ LinkIconImage, LinkConect, text, screenDimensions }) {
           src={LinkIconImage}
           alt={text}
           width={"100%"}
-          height={"100%"}
+          height={40}
           style={{ borderRadius: "100%", alignSelf: "center" }}
         />
       </a>
